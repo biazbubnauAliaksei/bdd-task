@@ -3,7 +3,7 @@ package com.epam.homework.product.page;
 import com.epam.homework.framework.element.Element;
 import org.openqa.selenium.By;
 
-public class ConcreteProductPage {
+public class ProductPage {
     private static final By ADD_TO_CART_LINK_LOCATOR = By.xpath("//a[@id='j-add-cart-btn']");
     private static final By ADD_TO_CARD_REPORT_WINDOW_LOCATOR = By.xpath("");
 

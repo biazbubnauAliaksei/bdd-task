@@ -6,6 +6,7 @@ I want to add product to cart
 So product will be located in cart
 
 Scenario: add product to cart
-Given product page
+!--Given product page
 When I click add to cart
-Then cart contains product
+And go to cart
+Then I see product in cart

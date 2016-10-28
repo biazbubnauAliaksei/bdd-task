@@ -6,6 +6,8 @@ import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
+import static org.junit.Assert.assertTrue;
+
 public class NavigateCategoryStep {
     private static final String INITIAL_RESOURCE_URL = "http://aliexpress.com/";
     private NavigationService service = new NavigationServiceImpl();
@@ -27,7 +29,7 @@ public class NavigateCategoryStep {
 
     @Then("$subcategory page is open")
     public void checkPage(String subCategory) {
-        service.isCurrentPageTarget(subCategory);
+        assertTrue(service.isCurrentPageTarget(subCategory));
     }
 
 }

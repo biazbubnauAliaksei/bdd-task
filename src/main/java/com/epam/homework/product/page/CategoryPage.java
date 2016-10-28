@@ -12,7 +12,7 @@ public class CategoryPage {
     private static final By BRAND_BUTTON_ELEMENTS_LOCATOR = By.xpath("//div[@id='brands-wall-content']/ul/li/a");
     private static final By CATEGORY_TITLE_CONTAINING_ELEMENT_LOCATOR =
             By.xpath("//div[@id='aliGlobalCrumb']/h1/span[last()]");
-    private static final By FIRST_ITEM_IN_LIST_ELEMENT_LOCATOR = By.xpath("//ul[@id='list-items']/li[1]/a");
+    private static final By FIRST_ITEM_IN_LIST_ELEMENT_LOCATOR = By.xpath("//ul[@id='list-items']/li[1]//h3/a");
     private static final String TITLE_ATRR_NAME = "title";
 
     private static final Element TITLE_CONTAINING_ELEMENT = new Element(CATEGORY_TITLE_CONTAINING_ELEMENT_LOCATOR);
@@ -27,11 +27,6 @@ public class CategoryPage {
         return SELECTED_BRAND_ELEMENT.getWrappedWebElement().getAttribute(TITLE_ATRR_NAME);
     }
 
-    public ConcreteProductPage selectFirstFoundProduct() {
-        FIRST_ITEM_IN_LIST_ELEMENT.waitAndClick();
-        return new ConcreteProductPage();
-    }
-
     public CategoryPage clickConcreteBrand(String name) {
         List<WebElement> elements = Browser.getBrowser().findElements(BRAND_BUTTON_ELEMENTS_LOCATOR);
         for (WebElement element: elements) {
@@ -42,9 +37,9 @@ public class CategoryPage {
         } return this;
     }
 
-    public ConcreteProductPage clickFirstItemFromList() {
+    public ProductPage clickFirstItemFromList() {
         FIRST_ITEM_IN_LIST_ELEMENT.waitAndClick();
-        return new ConcreteProductPage();
+        return new ProductPage();
     }
 
 }

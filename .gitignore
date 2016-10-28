@@ -1,0 +1,21 @@
+# Ide's service files and dirs
+*.iml
+idea/
+target/
+test-output/
+.project
+*idea*
+*.eml
+*.classpath
+
+META-INF/
+/out/
+/build/
+*.class
+*jar*
+*war*
+/logs/
+*.log
+#Temporary directories
+/temp/
+

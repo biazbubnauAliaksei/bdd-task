@@ -11,7 +11,7 @@ public interface ProductService {
 
     void goToCart();
 
-    void removeFromCart();
+    void removeFromCart(String header);
 
-    boolean isCartContainsProduct();
+    boolean  isCartContainsProduct(String header);
 }

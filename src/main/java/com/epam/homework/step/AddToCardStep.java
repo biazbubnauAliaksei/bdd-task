@@ -24,7 +24,7 @@ public class AddToCardStep {
     }
 
     @Then("I see product in cart")
-    public void checkWindowProductAdded() {
-        assertTrue(service.isAddToCardReportWindowDisplayed());
+    public void checkIsCartContainsProduct() {
+        assertTrue(service.isCartContainsProduct(productHeader));
     }
 }

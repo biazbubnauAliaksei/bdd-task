@@ -8,6 +8,5 @@ So cart not contains product
 
 Scenario: remove product from cart
 !--Given product page
-When I go to cart
-And remove product
+When I remove product
 Then cart not contain product

@@ -87,8 +87,4 @@ public final class Browser implements WrapsDriver {
         wait.until(conditions);
     }
 
-    public void mooveToElement(By by) {
-        Actions action = getActions();
-        action.moveToElement((WebElement) by);
-    }
 }

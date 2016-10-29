@@ -51,7 +51,7 @@ public class ProductPage {
     }
 
     public String getHeader() {
-        return PRODUCT_HEADER.getText();
+        return PRODUCT_HEADER.getText().trim();
     }
 }
 

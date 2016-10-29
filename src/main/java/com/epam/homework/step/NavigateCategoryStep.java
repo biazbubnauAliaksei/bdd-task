@@ -19,7 +19,7 @@ public class NavigateCategoryStep {
 
     @When("i choose $category")
     public void chooseCategory(String category) {
-        service.clickCategory(category);
+        service.selectCategory(category);
     }
 
     @When("click $subcategory")

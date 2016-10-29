@@ -27,18 +27,18 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void removeFromCart() {
-        new CartPage().remove();
+    public void removeFromCart(String header) {
+        new CartPage().remove(header);
     }
 
     @Override
     public boolean isCartContainsProduct(String header) {
-
-
+        return new CartPage().isContainsProduct(header);
     }
 
     @Override
     public String getProductHeader() {
         return new ProductPage().getHeader();
     }
+
 }

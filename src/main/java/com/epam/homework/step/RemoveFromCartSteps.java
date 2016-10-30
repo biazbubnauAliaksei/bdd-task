@@ -4,8 +4,7 @@ import com.epam.homework.framework.service.iface.ProductService;
 import com.epam.homework.framework.service.impl.ProductServiceImpl;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
-
-import static junit.framework.TestCase.assertFalse;
+import org.junit.Assert;
 
 public class RemoveFromCartSteps {
 
@@ -20,7 +19,7 @@ public class RemoveFromCartSteps {
 
     @Then("cart not contain product")
     public void checkCartForProduct() {
-        assertFalse(service.isCartContainsProduct(productHeader));
+        Assert.assertFalse("Cart should not contains product", service.isCartContainsProduct(productHeader));
     }
 
 }

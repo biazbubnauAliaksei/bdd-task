@@ -1,6 +1,6 @@
 package com.epam.homework.runner;
 
-import com.epam.homework.step.NavigateCategoryStep;
+import com.epam.homework.step.*;
 import org.jbehave.core.Embeddable;
 import org.jbehave.core.annotations.UsingEmbedder;
 import org.jbehave.core.annotations.UsingSteps;
@@ -16,7 +16,8 @@ import java.util.List;
 
 @RunWith(AnnotatedEmbedderRunner.class)
 @UsingEmbedder(embedder = Embedder.class, generateViewAfterStories = true, metaFilters = "-skip")
-@UsingSteps(instances = NavigateCategoryStep.class)
+@UsingSteps(instances = {NavigateCategoryStep.class, SearchByBrandNameStep.class,
+        SelectProductStep.class, AddToCardStep.class, RemoveFromCartSteps.class})
 public class Runner implements Embeddable {
     private Embedder embedder;
 

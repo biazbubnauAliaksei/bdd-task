@@ -10,7 +10,8 @@ public class MainPage {
     private static final By STARTING_WINDOW_CLOSE_BUTTON_LOCATOR =
             By.xpath("//div[contains(@class, 'ui-window-content')]/a");
 
-    private static final Element STARTING_WINDOW_CLOSE_BUTTON_ELEMENT = new Element(STARTING_WINDOW_CLOSE_BUTTON_LOCATOR);
+    private static final Element STARTING_WINDOW_CLOSE_BUTTON_ELEMENT =
+            new Element(STARTING_WINDOW_CLOSE_BUTTON_LOCATOR);
 
     public MainPage selectCategory(String category) {
         Element categoryElement = new Element(makeLocator(CONCRETE_CATEGORY_LOCATOR_PATTERN, category));

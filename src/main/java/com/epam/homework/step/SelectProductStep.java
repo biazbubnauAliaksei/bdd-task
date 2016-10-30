@@ -2,6 +2,7 @@ package com.epam.homework.step;
 
 import com.epam.homework.framework.service.impl.CategoryServiceImpl;
 import com.epam.homework.framework.service.impl.ProductServiceImpl;
+import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
@@ -14,8 +15,9 @@ public class SelectProductStep {
         new CategoryServiceImpl().clickFirstSearchResult();
     }
 
-    @Then("I get appropriate product page")
+    @Then("I get product page")
+    @Given("product page")
     public void getProductPage() {
-        assertTrue(new ProductServiceImpl().isTargetPage());
+        assertTrue("Open page should be target product page", new ProductServiceImpl().isTargetPage());
     }
 }
